@@ -1,67 +1,108 @@
-**BankingProject**
+# BankingProject
 
-A simple Java-based banking application project that demonstrates core banking operations like creating accounts, depositing, withdrawing, displaying account information, and managing basic customer data. This project is suitable for learning object-oriented programming and console-based application development.
+A console-based Banking Application built using Java.  
+This project demonstrates core Java concepts such as OOP, records, interfaces, and service-based architecture.
 
-**🧾 Features**
+## Features
 
-1. Create new bank accounts
+- Open a new bank account
+- Deposit money
+- Withdraw money
+- Transfer money between accounts
+- View account statement
+- List all accounts
+- Search account by customer name
+- Menu-driven console interface
 
-2. View all accounts
+## Technologies Used
 
-3. Deposit money into an account
+- Java (JDK 21+ recommended)
+- Object-Oriented Programming (OOP)
+- Java Records
+- Collections Framework
+- VS Code / IntelliJ IDEA
 
-4. Withdraw money from an account
-
-5. Search and display details of an account
-
-6. Simple menu-driven user interface
-
-**📌 Prerequisites**
-
-Make sure you have the following installed on your system:
-
-JDK (Java Development Kit) latest(21+)
-
-IDE or code editor (e.g., IntelliJ IDEA, Eclipse, VS Code)
-
-Git (optional, for cloning)
-
-📂 Clone the Repository
-git clone https://github.com/meadarshraj54/BankingProject.git
-cd BankingProject
-
-**🛠 Build & Run**
-
-Open the project in your preferred Java IDE.
-
-Compile all .java files in the src/ directory.
-
-Run the main class (e.g., Main.java or equivalent entry point).
-
-The application runs in the console with a menu.
-
-**📁 Project Structure**
+## Project Structure
+```
 BankingProject/
-├─ .idea/                   # IDE config files
-├─ src/                     # Source code
-│   ├─ Main.java            # Main application class
-│   ├─ Account.java         # Account class
-│   ├─ Bank.java            # Bank logic
-│   └─ ...                  # Other modules/classes
-├─ .gitignore
-└─ README.md
+├── src/
+│   ├── app/
+│   │   └── Main.java
+│   │
+│   ├── domain/
+│   │   ├── Account.java
+│   │   ├── Customer.java
+│   │   ├── Transaction.java
+│   │   └── Type.java
+│   │
+│   ├── service/
+│   │   ├── BankService.java
+│   │   └── implementation/
+│   │       └── ServiceImplementation.java
+│   │
+│   ├── repository/
+│   │   ├── AccountRepo.java
+│   │   ├── CustomerRepo.java
+│   │   └── TransactionRepo.java
+│   │
+│   ├── util/
+│   │   └── Validation.java
+│   │
+│   └── exceptions/
+│       ├── AccountNotFoundException.java
+│       ├── InsufficientBalanceException.java
+│       └── ValidationException.java
+│
+├── .gitignore
+├── README.md
+└── pom.xml
 
+```
 
-**⚠️ The exact file names and class names may vary based on your implementation.**
+## Prerequisites
 
+- Java JDK 16 or above (Java 17 preferred)
+- VS Code with Java Extension Pack or any Java IDE
 
-Enter the number to perform corresponding actions.
+## How to Run
 
-**🤝 Contributing**
+1. Clone the repository:
+   git clone https://github.com/meadarshraj54/BankingProject.git
 
-Contributions are welcome!
-If you want to add new features (like file storage, GUI, database integration), feel free to fork the repository and create a pull request.
+2. Open the project in your IDE.
 
-**❓ License**
+3. Ensure Java 17 is configured:
+   java -version
 
-This project is open-source and free to use for learning and experimentation.
+4. Run the Main class:
+   src/app/Main.java
+
+## Sample Menu
+
+1) Open Account  
+2) Deposit  
+3) Withdraw  
+4) Transfer  
+5) Account Statement  
+6) List Accounts  
+7) Search Account by Customer Name  
+0) Exit  
+
+## Notes
+
+- This project is intended for learning and practice.
+- Records are used for immutable domain models.
+- No database is used; data is stored in memory.
+
+## Future Enhancements
+
+- Database integration (MySQL / PostgreSQL)
+- File-based persistence
+- Spring Boot version
+- REST API support
+- Unit testing
+
+## Author
+
+Adarsh Raj  
+GitHub: https://github.com/meadarshraj54
